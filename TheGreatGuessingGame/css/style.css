@@ -29,7 +29,6 @@ body{
     text-align: center;
 }
 img, #play2{
-
     display: none;
 }
 
@@ -42,8 +41,6 @@ img, #play2{
 
 .selected{
     background-color: orangered;
-    outline: none;
-
 }
 #play2:hover{
     background-color:#cccf2d;
