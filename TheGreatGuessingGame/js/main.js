@@ -1,6 +1,6 @@
 let boxs=document.querySelectorAll(".square");
 let message=document.querySelector("#message");
-let colors=genrateRandomColor();
+let colors=generateRandomColor();
 let colorDisplay=document.querySelector("#colorDisplay");
 let pickedColor=colors[pickColor(6)];
 colorDisplay.innerHTML=pickedColor;
@@ -41,21 +41,21 @@ function pickColor(numero){
 function gRgb(){//randomColor
     return "rgb("+pickColor(255)+", "+pickColor(255)+", "+pickColor(255)+")";
 }
-function genrateRandomColor(){//auto
+function generateRandomColor(){//auto
         return [gRgb(),gRgb(),gRgb(),gRgb(),gRgb(),gRgb()];
 }
-function genrateRandomColor2(){//easy
+function generateRandomColor2(){//easy
     return [gRgb(),gRgb(),gRgb()];
 }
 function easy(){
-    colors=genrateRandomColor2();
+    colors=generateRandomColor2();
     asignar(boxs,colors); 
     pickedColor=colors[pickColor(3)];
     colorDisplay.innerHTML=pickedColor;
 }
 //-----------
 document.querySelector("#play").addEventListener("click", function(){
-   colors=genrateRandomColor();
+   colors=generateRandomColor();
    asignar(boxs,colors); 
    pickedColor=colors[pickColor(6)];
    colorDisplay.innerHTML=pickedColor;
@@ -66,7 +66,6 @@ document.querySelector("#play2").addEventListener("click", function(){
 document.querySelector("#easy").addEventListener("click", function(){
     for(i=3; i<=5; i++){
         boxs[i].style.display="none";
-        boxs[i].classList.add("t");
     }
     easy();
     document.querySelector("#play2").style.display="inline";
